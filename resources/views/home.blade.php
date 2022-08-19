@@ -22,6 +22,7 @@
 </div>
 <h1 class="mb-5">{{ $title }}</h1>
 
+{{-- woyyyyyyyyy --}}
 
  <h1 class="mb-5">Halaman home</h1>
 
