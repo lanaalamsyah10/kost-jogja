@@ -47,37 +47,5 @@
             </ul>
         @endcan
 
-        <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                aria-expanded="true" aria-controls="collapsePages">
-
-                <i class="fas fa-fw fa-folder"></i>
-
-                <span>Data Master</span>
-            </a>
-            <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-
-                    <h6 class="collapse-header">Master Screens:</h6>
-                    {{-- @if (Auth::user()->is_admin == '2')
-                        <a class="collapse-item" href="{{ route('MstAdmin.index') }}">{{ __('admin') }}</a>
-                    @endif
-                    @if (Auth::user()->is_admin == '1')
-                        <a class="collapse-item" href="{{ route('MstKaryawan.index') }}">{{ __('Karyawan') }}</a>
-                        <a class="collapse-item" href="{{ route('MstJabatan.index') }}">{{ __('Jabatan') }}</a>
-                        <a class="collapse-item" href="{{ route('MstLokasi.index') }}">{{ __('Lokasi') }}</a>
-                    @endif --}}
-                    {{-- <a class="collapse-item" href="{{ route('mst-potongan.index') }}">{{ __('Potongan') }}</a>
-              <a class="collapse-item" href="{{ route('mst-bonus.index') }}">{{ __('Bonus') }}</a> --}}
-                    {{-- <a class="collapse-item" href="{{ route('mst-kategori.index') }}">{{ __('Kategori') }}</a> --}}
-                    {{-- <div class="collapse-divider"></div> --}}
-                    {{-- <h6 class="collapse-header">Akun Pages:</h6> --}}
-                    {{-- <a class="collapse-item" href="{{ route('user.index') }}">{{ __('User') }}</a> --}}
-                    {{-- <a class="collapse-item" href="{{ route('mst-role.index') }}">{{ __('Role') }}</a> --}}
-                </div>
-            </div>
-        </li>
-
     </div>
 </nav>

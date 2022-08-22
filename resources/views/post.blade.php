@@ -54,15 +54,15 @@
                                             Pencari
                                             Kost
                                         </a></p>
-                                    <hr>
+                                    <hr class="dropdown-divider">
                                 </div>
                                 <div class="modal-body">
-                                    <p><a class="dropdown-item " href="/login">
+                                    <p><a class="dropdown-item " href="/login/pemilik">
                                             <img src="{{ asset('img/pmk1.png') }}" alt="" style="width:70px;">
                                             Pemilik
                                             Kost
                                         </a></p>
-                                    <hr>
+                                    <hr class="dropdown-divider">
                                 </div>
                             </div>
 

@@ -67,6 +67,15 @@ Route::post(
     [LoginController::class, 'logout']
 );
 
+// Route::get(
+//     '/login/pemilik',
+//     [LoginAdminController::class, 'index']
+// );
+// Route::post(
+//     '/login',
+//     [LoginController::class, 'authenticate']
+// );
+
 Route::get(
     '/register',
     [RegisterController::class, 'index']
