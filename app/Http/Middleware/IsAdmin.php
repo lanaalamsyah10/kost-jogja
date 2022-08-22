@@ -16,13 +16,9 @@ class IsAdmin
      */
     public function handle(Request $request, Closure $next)
     {
-        if(auth()->check() && auth()->user()->is_admin ) {
-            view('dashboard.index');
-        }else {
-            abort(404);
+        if(!auth()->check() || !auth()->user()->is_admin ) {
+            abort(403);
         }
-
-
         return $next($request);
     }
 }

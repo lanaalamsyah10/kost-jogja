@@ -19,16 +19,16 @@ use App\Http\Controllers\DashboardPostController;
 */
 
 Route::get('/', function () {
-    return view('home',[
-        "title"=>"Home",
-        "active"=>"home"
+    return view('home', [
+        "title" => "Home",
+        "active" => "home"
     ]);
 });
 
 Route::get('/about', function () {
     return view('about', [
-        "title"=>"About",
-        "active"=>"about",
+        "title" => "About",
+        "active" => "about",
         "name" => "Kosan banguntapan",
         "email" => "kosanbantul@gmail.com",
         "image" => "kost.jpg"
@@ -37,44 +37,63 @@ Route::get('/about', function () {
 
 
 
-Route::get('/blog',[PostController::class,'index']);
+Route::get('/blog', [PostController::class, 'index']);
 
-Route::get('/posts',[PostController::class,'index']);
+Route::get('/posts', [PostController::class, 'index']);
 
 // halaman singel post
-Route::get('/posts/{post:slug}',[PostController::class,'show']);
+Route::get('/posts/{post:slug}', [PostController::class, 'show']);
+Route::get('/posts/{categories:slug}', [AdminCategoryController::class, 'show']);
 
-route::get('/categories',function(){
-    return view('categories',[
-        'title'=>'Post Categories',
-        'active'=>'categories',
+route::get('/categories', function () {
+    return view('categories', [
+        'title' => 'Post Categories',
+        'active' => 'categories',
         'categories' => Category::all()
     ]);
 });
 
 
-Route::get('/login', [LoginController::class, 'index']
+Route::get(
+    '/login',
+    [LoginController::class, 'index']
 )->name('login')->middleware('guest');
-Route::post('/login', [LoginController::class, 'authenticate']
+Route::post(
+    '/login',
+    [LoginController::class, 'authenticate']
 );
-Route::post('/logout', [LoginController::class, 'logout']
+Route::post(
+    '/logout',
+    [LoginController::class, 'logout']
 );
 
-Route::get('/register', [RegisterController::class, 'index']
+Route::get(
+    '/register',
+    [RegisterController::class, 'index']
 )->middleware('guest');
-Route::post('/register', [RegisterController::class, 'store']
+Route::post(
+    '/register',
+    [RegisterController::class, 'store']
 );
 
-Route::get('/dashboard', function(){
-    return view('dashboard.index');
-}
-)->middleware(['admin']);
+Route::get(
+    '/dashboard',
+    function () {
+        return view('dashboard.index');
+    }
+)->middleware('auth');
 
-Route::get('/dashboard/posts/checkSlug', [DashboardPostController::class, 'checkSlug']
+Route::get(
+    '/dashboard/posts/checkSlug',
+    [DashboardPostController::class, 'checkSlug']
+)->middleware('auth');
+Route::get(
+    '/dashboard/categories/checkSlug',
+    [AdminCategoryController::class, 'checkSlug']
 )->middleware('auth');
 
 Route::resource('/dashboard/posts', DashboardPostController::class)
-->middleware('auth');
+    ->middleware('auth');
 
-Route::resource('/dashboard/categories', AdminCategoryController::class)->except('show')
-->middleware('admin');
+Route::resource('/dashboard/categories', AdminCategoryController::class)
+    ->middleware('admin');
