@@ -20,7 +20,7 @@ use App\Http\Controllers\SuperAdminController;
 */
 
 Route::get('/', function () {
-    return view('home', [
+    return view('app.index', [
         "title" => "Home",
         "active" => "home"
     ]);
