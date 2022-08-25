@@ -6,9 +6,11 @@
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fab fa-autoprefixer"></i>
             </div>
-            <div class="sidebar-brand-text mb-3"><img src="{{ asset('img/lg.png') }} " alt="logo" style="width:75px;">
+            <div class="sidebar-brand-text mb-3"><img src="{{ asset('img/logo.png') }} " alt="logo"
+                    style="width:75px;">
             </div>
         </a>
+
         <ul class="nav flex-column">
             <li class="nav-item ">
                 <a class="nav-link text-white{{ Request::is('dashboard') ? 'active' : '' }} " aria-current="page"
@@ -25,8 +27,7 @@
                 </a>
             </li>
         </ul>
-
-        @can('admin')
+        @can('super_admin')
             <h6 class="sidebar-heading d-flex justifiy-content-between align-items-center px-3 mt-4 mb-1 text-muted">
                 <span>Administrator</span>
             </h6>
@@ -38,6 +39,13 @@
                         Categories
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white{{ Request::is('dashboard/admin*') ? 'active' : '' }} "
+                        href="/dashboard/admin">
+                        <span data-feather="users" class="align-text-bottom text-white"></span>
+                        Admin
+                    </a>
+                </li>
                 {{-- <li class="nav-item">
           <a class="nav-link {{ Request::is('dashboard/users*') ? 'active' : '' }} " href="/dashboard/users">
             <span data-feather="file-text" class="align-text-bottom"></span>
@@ -46,6 +54,7 @@
         </li> --}}
             </ul>
         @endcan
+
 
     </div>
 </nav>

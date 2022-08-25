@@ -7,6 +7,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\DashboardPostController;
+use App\Http\Controllers\SuperAdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -90,7 +91,7 @@ Route::get(
     function () {
         return view('dashboard.index');
     }
-)->middleware('auth');
+)->middleware(['auth', 'admin']);
 
 Route::get(
     '/dashboard/posts/checkSlug',
@@ -106,3 +107,5 @@ Route::resource('/dashboard/posts', DashboardPostController::class)
 
 Route::resource('/dashboard/categories', AdminCategoryController::class)
     ->middleware('admin');
+Route::resource('/dashboard/admin', SuperAdminController::class)->except('show', 'edit')
+    ->middleware('auth');

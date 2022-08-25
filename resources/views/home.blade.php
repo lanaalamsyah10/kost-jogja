@@ -1,29 +1,49 @@
 @extends('layouts.main')
 
 @section('container')
-    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
-                aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="{{ asset('img/lg.png') }}" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-
-                <div class="container">
-                    <div class="carousel-caption text-start">
-                        <h1>Example headline.</h1>
-                        <p>Some representative placeholder content for the first slide of the carousel.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card w-50">
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With </p>
+                        <a href="#" class="btn btn-primary">Go </a>
                     </div>
                 </div>
             </div>
-            <h1 class="mb-5">{{ $title }}</h1>
-
-            {{-- woyyyyyyyyy --}}
-
-            <h1 class="mb-5">Halaman home</h1>
-        @endsection
+            <div class="col-sm-6">
+                <div class="card w-50">
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card w-50">
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With </p>
+                        <a href="#" class="btn btn-primary">Go </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-5" style="max-width: 540px;">
+            <div class="row ">
+                <div class="col-md-3">
+                    <img src="..." class="card-img" alt="...">
+                </div>
+                <div class="col-md-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection

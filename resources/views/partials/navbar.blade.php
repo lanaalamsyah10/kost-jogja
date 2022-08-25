@@ -8,7 +8,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="container ">
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item ">
                     <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="/">Home</a>
@@ -25,19 +25,27 @@
                 </li>
             </ul>
 
-            <div class=" navbar-collapse  justify-content-end">
-                <ul class="navbar-nav ">
-                    @auth
+            @auth
+                <div class=" navbar-collapse  justify-content-end">
+                    <ul class="navbar-nav ">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 Welcome back, {{ auth()->user()->name }}
                             </a>
                             <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item" href="/dashboard"><i
-                                            class="bi bi-layout-text-sidebar-reverse"></i> My dashboard</a>
-                                </li>
+                                @can('super_admin')
+                                    <li>
+                                        <a class="dropdown-item" href="/dashboard"><i
+                                                class="bi bi-layout-text-sidebar-reverse"></i> My dashboard</a>
+                                    </li>
+                                @endcan
+                                @can('admin')
+                                    <li>
+                                        <a class="dropdown-item" href="/dashboard"><i
+                                                class="bi bi-layout-text-sidebar-reverse"></i> My dashboard</a>
+                                    </li>
+                                @endcan
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
@@ -50,28 +58,15 @@
                             </ul>
                         </li>
                     @else
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle btn btn-muted" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Login
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/login"><i class="bi bi-box-arrow-in-right"></i> Pemilik
-                                        Kost</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="/login"><i class="bi bi-box-arrow-in-right"></i> Pencari
-                                        Kost</a></li>
-                            </ul>
+                        <li class="navbar">
+                            <a href="/login"
+                                class="nav-link btn btn-outline-success{{ request()->segment(1) == 'login' ? 'active' : '' }}"><i
+                                    class="bi bi-box-arrow-in-right"></i>
+                                Masuk</a>
                         </li>
-                        {{-- <li class="nav-item">
-          <a href="/login" class="nav-link btn btn-muted{{ request()->segment(1) == 'login' ? 'active' : '' }}"><i class="bi bi-box-arrow-in-right"></i>
-            Login</a>
-        </li> --}}
-                    @endauth
-                </ul>
-            </div>
+                    </ul>
+                </div>
+            @endauth
 
 
         </div>

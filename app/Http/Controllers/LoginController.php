@@ -10,9 +10,14 @@ class LoginController extends Controller
     public function index()
     {
         return view('login.index', [
-            "title"=>"Login",
-            "active"=>"login"
+            "title" => "Login",
+            "active" => "login"
         ]);
+    }
+
+    public function pemilik()
+    {
+        return view('login.pemilik');
     }
 
     public function authenticate(Request $request)
@@ -21,15 +26,14 @@ class LoginController extends Controller
             'email' => 'required|email',
             'password' => 'required',
         ]);
-        
+
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
- 
+
             return redirect()->intended('/dashboard');
         }
 
         return back()->with('loginError', 'login failed');
-        
     }
 
     public function logout()

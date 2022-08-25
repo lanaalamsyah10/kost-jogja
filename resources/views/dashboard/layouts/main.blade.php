@@ -33,6 +33,7 @@
 
     @include('dashboard.layouts.header')
 
+
     <div class="container-fluid">
         <div class="row">
             @include('dashboard.layouts.sidebar')
@@ -41,7 +42,6 @@
             </main>
         </div>
     </div>
-
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
@@ -54,11 +54,12 @@
 
 </body>
 
+
 <!-- Footer -->
 <footer class="sticky-footer bg-white">
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
-            <span>Copyright &copy; E-Absensi 2021</span>
+            <span>Copyright &copy; KosJogja 2022</span>
         </div>
     </div>
 </footer>

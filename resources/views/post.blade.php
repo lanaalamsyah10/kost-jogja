@@ -58,15 +58,13 @@
                                 </div>
                                 <div class="modal-body">
                                     <p><a class="dropdown-item " href="/login/pemilik">
-                                            <img src="{{ asset('img/pmk1.png') }}" alt="" style="width:70px;">
+                                            <img src="{{ asset('img/pmk.png') }}" alt="" style="width:70px;">
                                             Pemilik
                                             Kost
                                         </a></p>
                                     <hr class="dropdown-divider">
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
                 </div>
