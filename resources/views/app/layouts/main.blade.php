@@ -35,12 +35,16 @@
     @yield('jumbotron')
 
     <main id="main">
+        @include('app.about')
+        @include('app.kost')
+        @include('app.kategori')
+        @include('app.orang')
 
         @yield('content')
-
     </main><!-- End #main -->
 
     @include('app.layouts.footer')
+
 
     <div id="preloader"></div>
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
