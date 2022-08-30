@@ -22,15 +22,34 @@
 
       <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <img src="img/rumah1.jpg" class="img-fluid" alt="">
-          <div class="portfolio-info">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/rumah1.jpg"class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/rumah1.jpg"class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/rumah1.jpg"class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          <div class="portfolio-info" class="img-fluid" alt="">
             <h4>kost jogja Kecamatan Bangutapan</h4>
-            <p>Rp. 5.000.000</p>
-            <a href="#" class="bx bx-plus"></i></a>
-            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            <p>Rp. 5.000.000  <a href="/pesan"class="bx bx-plus"></i></a></p>
+
           </div>
-        </div>
+          </div>
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-web">
           <img src="img/rumah2.jpg" class="img-fluid" alt="">
@@ -47,8 +66,9 @@
           <div class="portfolio-info">
             <h4>App 2</h4>
             <p>App</p>
-            <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
-            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            <a href="img/rumah3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+            <a href="img/rumah4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+
           </div>
         </div>
 

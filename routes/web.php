@@ -8,6 +8,9 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\DashboardPostController;
 use App\Http\Controllers\SuperAdminController;
+use App\Http\Controllers\PesanController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -40,7 +43,9 @@ Route::get('/about', function () {
 
 Route::get('/blog', [PostController::class, 'index']);
 
+
 Route::get('/posts', [PostController::class, 'index']);
+
 
 // halaman singel post
 Route::get('/posts/{post:slug}', [PostController::class, 'show']);
@@ -109,3 +114,7 @@ Route::resource('/dashboard/categories', AdminCategoryController::class)
     ->middleware('admin');
 Route::resource('/dashboard/admin', SuperAdminController::class)->except('show', 'edit')
     ->middleware('auth');
+
+Route::get ('/pesan',
+[PesanController::class, 'index']
+);
