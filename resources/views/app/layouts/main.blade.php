@@ -37,6 +37,7 @@
     <main id="main">
 
         @yield('content')
+        @include('app.kost')
 
     </main><!-- End #main -->
 

@@ -3,7 +3,7 @@
 @section('container')
     <h1 class=" text-end">Mau nyari kost?</h1>
     <h4 class="section-subheading font-weight-normal mb-4">Dapatkan infonya dan langsung sewa di KostJogja.</h4>
-    <div class="row justify-content-start">
+    <div class="row justify-content-start mb-5">
         <div class="col-md-6">
             <form action="/posts">
                 @if (request('category'))
@@ -22,7 +22,7 @@
     </div>
 
     @if ($posts->count())
-        <div class="card mb-3 mt-4">
+        {{-- <div class="card mb-3 mt-4">
 
             @if ($posts[0]->image)
                 <div style="max-height: 350px; overflow:hidden;">
@@ -48,12 +48,12 @@
                 <p class="card-text">{{ $posts[0]->excerpt }}</p>
                 <a href="/posts/{{ $posts[0]->slug }}"class="text-decoration-none btn btn-primary ">Readmore</a>
             </div>
-        </div>
+        </div> --}}
 
         <div class="container">
             <div class="row">
 
-                @foreach ($posts->skip(1) as $post)
+                @foreach ($posts as $post)
                     <div class="col-md-4 mb-3">
                         <div class="card">
                             <div class="position-absolute px-3 py-2 text-white" style="background-color: rgba(0,0,0,0.7)">
@@ -78,7 +78,7 @@
                                             {{ $post->author->name }}</a> {{ $post->created_at->diffForHumans() }}
                                     </small>
                                 </p>
-                                <p class="card-text">{{ $post->excerpt }}</p>
+                                <p class="card-text">{{ Str::limit(strip_tags($post->excerpt), 70) }}</p>
                                 <a href="/posts/{{ $post->slug }}" class="btn btn-primary">Readmore</a>
                             </div>
                         </div>

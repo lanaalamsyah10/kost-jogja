@@ -8,6 +8,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\DashboardPostController;
 use App\Http\Controllers\SuperAdminController;
+use App\Http\Controllers\GoogleController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,7 +21,7 @@ use App\Http\Controllers\SuperAdminController;
 */
 
 Route::get('/', function () {
-    return view('app.index', [
+    return view('home', [
         "title" => "Home",
         "active" => "home"
     ]);
@@ -107,5 +108,6 @@ Route::resource('/dashboard/posts', DashboardPostController::class)
 
 Route::resource('/dashboard/categories', AdminCategoryController::class)
     ->middleware('admin');
-Route::resource('/dashboard/admin', SuperAdminController::class)->except('show', 'edit')
+Route::resource('/dashboard/admin', SuperAdminController::class)
     ->middleware('auth');
+Route::get('/maps', [GoogleController::class, 'index'])->name('index');
