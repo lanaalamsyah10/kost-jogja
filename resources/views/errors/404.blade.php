@@ -9,8 +9,7 @@
 </head>
 
 <body>
-    <h1>halaman tidak ditemukan</h1>
-    <img src="{{ asset('../../img/lg.png') }}" alt="">
+
 </body>
 
 </html>

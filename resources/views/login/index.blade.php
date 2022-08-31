@@ -2,7 +2,7 @@
 @section('container')
     <h3 class="text-center mt-5">Login</h3>
 
-    <div class="row justify-content-center mt-5">
+    <div class="row justify-content-center my-5">
         <div class="col-lg-6">
 
 
@@ -50,4 +50,6 @@
         </div>
     </div>
     </div>
+
+
 @endsection

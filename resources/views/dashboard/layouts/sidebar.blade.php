@@ -23,7 +23,7 @@
                 <a class="nav-link text-white{{ Request::is('dashboard/posts*') ? 'active' : '' }} "
                     href="/dashboard/posts">
                     <span data-feather="file-text" class="align-text-bottom text-white"></span>
-                    My Post
+                    Postingan
                 </a>
             </li>
         </ul>
@@ -36,7 +36,7 @@
                     <a class="nav-link text-white{{ Request::is('dashboard/categories*') ? 'active' : '' }} "
                         href="/dashboard/categories">
                         <span data-feather="grid" class="align-text-bottom text-white"></span>
-                        Categories
+                        Kategori
                     </a>
                 </li>
                 <li class="nav-item">
