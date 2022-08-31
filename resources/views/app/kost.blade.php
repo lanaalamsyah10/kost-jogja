@@ -9,6 +9,7 @@
                 vitae autem.</p>
         </div>
 
+<<<<<<< HEAD
         <div class="row" data-aos="fade-up" data-aos-delay="100">
             <div class="col-lg-12 d-flex justify-content-center">
                 <ul id="portfolio-flters">
@@ -19,18 +20,42 @@
                 </ul>
             </div>
           <div class="portfolio-info" class="img-fluid" alt="">
-            <h4>kost jogja Kecamatan Bangutapan</h4>
-            <p>Rp. 5.000.000  <a href="/pesan"class="bx bx-plus"></i></a></p>
+=======
+      <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <img src="img/rumah1.jpg" class="img-fluid" alt="">
+          <div class="portfolio-info">
+>>>>>>> parent of 0c38bb8 (pesan)
+            <h4>kost jogja Kecamatan Bangutapan</h4>
+            <p>Rp. 5.000.000</p>
+            <a href="#" class="bx bx-plus"></i></a>
+            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
           </div>
-          </div>
+        </div>
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-web">
           <img src="img/rumah2.jpg" class="img-fluid" alt="">
           <div class="portfolio-info">
             <h4>Web 3</h4>
+<<<<<<< HEAD
             <p>Rp. 5.000.000  <a href="/pesan"class="bx bx-plus"></i></a></p>
 
+=======
+            <p>Web</p>
+            <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <img src="img/rumah3.jpg" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>App 2</h4>
+            <p>App</p>
+            <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+>>>>>>> parent of 0c38bb8 (pesan)
           </div>
 
         </div>

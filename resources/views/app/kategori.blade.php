@@ -15,10 +15,9 @@
       </div>
 
       <div class="row">
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="150">
-
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
           <div class="icon-box">
-            <img src="img/rumah1.jpg" width="100%" height="60%">
+            <img src="img/rumah1.jpg" width="100%" height="90%">
             <h4><a href="">Lorem Ipsum</a></h4>
             <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
           </div>
