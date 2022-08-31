@@ -55,9 +55,8 @@
           <img src="img/rumah2.jpg" class="img-fluid" alt="">
           <div class="portfolio-info">
             <h4>Web 3</h4>
-            <p>Web</p>
-            <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            <p>Rp. 5.000.000  <a href="/pesan"class="bx bx-plus"></i></a></p>
+
           </div>
         </div>
 
@@ -122,15 +121,6 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-          <img src="img/rumah9.jpg" class="img-fluid" alt="">
-          <div class="portfolio-info">
-            <h4>Web 3</h4>
-            <p>Web</p>
-            <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-          </div>
-        </div>
 
       </div>
 

@@ -5,13 +5,44 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
+                    <h3 class="text-muted">Kosan Jogja Barat</h3>
                 </div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-6">
                             <img  src="img/rumah2.jpg" class="rounded mx-auto d-block" width="100%" alt="">
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-5">
+                            <table class="table">
+                                <h3 class="text-muted"> Rp 7.500.000</h3>
+                                <tbody>
+                                <tr>
+                                    <td class="section-subheading text-muted">Kost jogja</td>
+                                    <td>:</td>
+                                    <td class="section-subheading text-muted">barat</td>
+                                </tr>
+                                <tr>
+                                    <td class="section-subheading text-muted">Kategori</td>
+                                    <td>:</td>
+                                    <td class="section-subheading text-muted">Laki-Laki</td>
+                                </tr>
+                                <tr>
+                                    <td class="section-subheading text-muted">Ukuran</td>
+                                    <td>:</td>
+                                    <td class="section-subheading text-muted">3 x 4</td>
+                                </tr>
+                                <tr>
+                                    <td class="section-subheading text-muted">Lokasi</td>
+                                    <td>:</td>
+                                    <td class="section-subheading text-muted">Bangutapan</td>
+                                </tr>
+
+                            </tbody>
+                            </table>
+                            <p class="section-subheading text-muted">Kosan jogja Barat menerima kosan untuk
+                                pria fasalitas : Kamar 3 X 4 m 2. Meja 3. Kamar Mandi Luas 4. Spring Bed 5.
+                                Lemari 6. Parkir Motor / Mobil Harga : Rp 7.500.000 /thm</p>
+                            <a href="#" class="btn btn-sm btn-primary">Pesan Sekarang</a>
 
                         </div>
                     </div>
@@ -144,7 +175,7 @@
 
           <h6 class="border-bottom pb-2 mb-0">Tipe A</h6>
           <div class="d-flex text-muted pt-3">
-            <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"/><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+            <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" ></svg>
 
             <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
               <div class="d-flex justify-content-between">
@@ -155,7 +186,7 @@
             </div>
           </div>
           <div class="d-flex text-muted pt-3">
-            <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"/><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+            <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" ></svg>
 
             <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
               <div class="d-flex justify-content-between">
@@ -166,7 +197,7 @@
             </div>
           </div>
           <div class="d-flex text-muted pt-3">
-            <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"/><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+            <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" ></svg>
 
             <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
               <div class="d-flex justify-content-between">
@@ -178,7 +209,7 @@
           </div>
 
           <div class="d-flex text-muted pt-3">
-            <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"/><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+            <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32"></svg>
 
             <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
               <div class="d-flex justify-content-between">
@@ -190,7 +221,7 @@
           </div>
 
           <div class="d-flex text-muted pt-3">
-            <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"/><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+            <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32"></svg>
 
             <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
               <div class="d-flex justify-content-between">
@@ -202,7 +233,7 @@
           </div>
 
           <div class="d-flex text-muted pt-3">
-            <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"/><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+            <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32"></svg>
 
             <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
               <div class="d-flex justify-content-between">
@@ -214,7 +245,7 @@
           </div>
 
           <div class="d-flex text-muted pt-3">
-            <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"/><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+            <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32"></svg>
 
             <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
               <div class="d-flex justify-content-between">
@@ -226,7 +257,7 @@
           </div>
 
           <div class="d-flex text-muted pt-3">
-            <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"/><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+            <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32"></svg>
 
             <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
               <div class="d-flex justify-content-between">
