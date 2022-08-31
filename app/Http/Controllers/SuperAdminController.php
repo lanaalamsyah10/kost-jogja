@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Admin;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class SuperAdminController extends Controller
 {
@@ -15,9 +16,9 @@ class SuperAdminController extends Controller
      */
     public function index()
     {
+        $user = DB::table('users')->get();
         return view('dashboard.admin.index', [
-
-            'posts' => Category::all()
+            'users' => $user
         ]);
     }
 
@@ -28,7 +29,7 @@ class SuperAdminController extends Controller
      */
     public function create()
     {
-        //
+        return @dd('ini');
     }
 
     /**
@@ -50,7 +51,7 @@ class SuperAdminController extends Controller
      */
     public function show(Admin $admin)
     {
-        //
+        return view('dashboard.admin.show');
     }
 
     /**
@@ -61,7 +62,7 @@ class SuperAdminController extends Controller
      */
     public function edit(Admin $admin)
     {
-        //
+        return view('dashboard.admin.edit');
     }
 
     /**
@@ -84,6 +85,8 @@ class SuperAdminController extends Controller
      */
     public function destroy(Admin $admin)
     {
-        //
+        Admin::destroy($admin->id);
+        return redirect('/dashboard/admin')
+            ->with('success', 'Category deleted successfully');
     }
 }

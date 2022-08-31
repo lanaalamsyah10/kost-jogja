@@ -10,13 +10,30 @@
 
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                <li><a class="nav-link scrollto" href="#about">About</a></li>
-                <li><a class="nav-link scrollto" href="#portfolio">Kost</a></li>
+                <li><a class="nav-link scrollto" href="
+                    @if(Request::is('pesan*'))
+                        /
+                    @else
+                        #hero
+                    @endif
+                    ">Home</a></li>
+                <li><a class="nav-link scrollto" href="
+                    @if(Request::is('pesan*'))
+                        /
+                    @else
+                        #about
+                    @endif
+                    ">About</a></li>
+                <li><a class="nav-link scrollto {{ Request::is('pesan*') ? 'active' : '' }}" href="#portfolio">Kost</a></li>
                 <li><a class="nav-link scrollto " href="#services">Kategori</a></li>
                 <li><a class="nav-link scrollto" href="#team">Pemilik</a></li>
+<<<<<<< HEAD
                 <li class="dropdown"><a href="#"><span>Login</span> <i class="bi bi-chevron-down"></i></a>
                 <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+=======
+                <li class="dropdown"><a href="/login"><span>Login</span> <i class="bi bi-chevron-down"></i></a>
+                  <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+>>>>>>> 9fc55fbd2b4e4060d57482cb1c7813fcef98f6a4
 
                 <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->

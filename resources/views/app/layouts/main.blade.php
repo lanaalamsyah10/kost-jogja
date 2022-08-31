@@ -41,6 +41,8 @@
         @include('app.orang')
 
         @yield('content')
+        @include('app.kost')
+
     </main><!-- End #main -->
 
     @include('app.layouts.footer')

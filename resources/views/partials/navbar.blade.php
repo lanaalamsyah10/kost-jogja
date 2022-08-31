@@ -1,13 +1,13 @@
 {{-- TAMPILAN NAV --}}
-<nav class="navbar navbar-expand-lg navbar-light bg-muted ">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <a class="navbar-brand" href="/">
-        <img src="{{ asset('img/lg.png') }} " alt="logo" style="width:75px;">
+        <img src="{{ asset('img/lg.png') }} " alt="logo" style="width:70px;">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="container ">
+    <div class="container mb-2">
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item ">
@@ -37,13 +37,13 @@
                                 @can('super_admin')
                                     <li>
                                         <a class="dropdown-item" href="/dashboard"><i
-                                                class="bi bi-layout-text-sidebar-reverse"></i> My dashboard</a>
+                                                class="bi bi-layout-text-sidebar-reverse"></i> Dashboard</a>
                                     </li>
                                 @endcan
                                 @can('admin')
                                     <li>
                                         <a class="dropdown-item" href="/dashboard"><i
-                                                class="bi bi-layout-text-sidebar-reverse"></i> My dashboard</a>
+                                                class="bi bi-layout-text-sidebar-reverse"></i> Dashboard</a>
                                     </li>
                                 @endcan
                                 <li>
@@ -58,12 +58,51 @@
                             </ul>
                         </li>
                     @else
-                        <li class="navbar">
-                            <a href="/login"
-                                class="nav-link btn btn-outline-success{{ request()->segment(1) == 'login' ? 'active' : '' }}"><i
-                                    class="bi bi-box-arrow-in-right"></i>
-                                Masuk</a>
-                        </li>
+                        @if (!auth()->check())
+                            @if (!Request::is('login'))
+                                <li class="navbar">
+                                    <a href="#" class="nav-link btn btn-outline active"
+                                        style="background-color: goldenrod" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal"
+                                        {{ request()->segment(1) == 'login' ? 'active' : '' }}>Masuk
+                                    </a>
+                                </li>
+                            @endif
+                        @else
+                            <a href="/login">Login</a>
+                        @endif
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <p class="card-title h4 my-4 ">Masuk Ke KostJogja</p>
+                                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <div class="modal-body">
+                                            <p><a class="dropdown-item " href="/login">
+                                                    <img src="{{ asset('img/pck.svg') }}" alt=""
+                                                        style="width:70px;">
+                                                    Pencari Kost
+                                                </a></p>
+                                            <hr class="dropdown-divider">
+                                        </div>
+                                        <div class="modal-body">
+                                            <p><a class="dropdown-item " href="/login/pemilik">
+                                                    <img src="{{ asset('img/pmk.svg') }}" alt=""
+                                                        style="width:70px;">
+                                                    Pemilik Kost
+                                                </a></p>
+                                            <hr class="dropdown-divider">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </ul>
                 </div>
             @endauth

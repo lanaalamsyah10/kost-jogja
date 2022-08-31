@@ -44,13 +44,19 @@ class AdminCategoryController extends Controller
     {
         $messages = [
             'required' => 'Kolom tidak boleh kosong',
-            'unique' => 'Data sudah ada'
+            'unique' => 'Data sudah ada',
+            'image' => 'Format harus gambar',
+            'mimes' => 'Format yang diizinkan :values',
+            'image.max' => 'Maksimal 5mb'
         ];
         $validated = $request->validate([
             'name' => 'required|unique:categories,name',
-            'slug' => 'required'
+            'slug' => 'required',
+            'image' => 'required|image|mimes:jpg,png,jpeg|max:5000'
         ], $messages);
-
+        if ($request->file('image')) {
+            $validated['image'] = $request->file('image')->store('categories-image');
+        }
         Category::create($validated);
 
         return redirect('/dashboard/categories')->with('success', 'Category created successfully');

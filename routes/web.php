@@ -8,19 +8,12 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\DashboardPostController;
 use App\Http\Controllers\SuperAdminController;
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+
+use App\Http\Controllers\GoogleController;
+
 
 Route::get('/', function () {
-    return view('app.index', [
+    return view('home', [
         "title" => "Home",
         "active" => "home"
     ]);
@@ -40,7 +33,9 @@ Route::get('/about', function () {
 
 Route::get('/blog', [PostController::class, 'index']);
 
+
 Route::get('/posts', [PostController::class, 'index']);
+
 
 // halaman singel post
 Route::get('/posts/{post:slug}', [PostController::class, 'show']);
@@ -107,5 +102,7 @@ Route::resource('/dashboard/posts', DashboardPostController::class)
 
 Route::resource('/dashboard/categories', AdminCategoryController::class)
     ->middleware('admin');
-Route::resource('/dashboard/admin', SuperAdminController::class)->except('show', 'edit')
+Route::resource('/dashboard/admin', SuperAdminController::class)
     ->middleware('auth');
+
+Route::get('/maps', [GoogleController::class, 'index'])->name('index');
