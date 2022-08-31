@@ -1,20 +1,69 @@
 @extends('dashboard.layouts.main')
 @section('container')
-    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Selamat datang {{ auth()->user()->name }}</h1>
+    <div class="contianer mt-5">
+        <div class="d-flex justify-content-between border-bottom">
+            <h3 class="mt-3">Tabel Pengguna</h3>
+            <a href="/dashboard/admin/create" class="btn btn-success mb-4 "> Tambah <span data-feather="plus"></span></a>
+        </div>
+
+        @if (session()->has('success'))
+            <div class="alert alert-success col-lg-8" role="alert">
+                {{ session('success') }}
+            </div>
+        @endif
+
+        <div class="card mt-5">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Nama</th>
+                                <th>Username</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($users as $user)
+                                <tr>
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{ $user->name }}</td>
+                                    <td>{{ $user->username }}</td>
+                                    <td>{{ $user->email }}</td>
+                                    <td>
+                                        @if ($user->is_admin == 1)
+                                            <span class="badge bg-primary">Super Admin</span>
+                                        @elseif($user->is_admin == 2)
+                                            <span class="badge bg-success">Admin</span>
+                                        @elseif($user->is_admin == 0)
+                                            <span class="badge bg-secondary">User</span>
+                                        @endif
+                                    </td>
+                                    <td>
+                                        <a href="/dashboard/admin/{{ $user->is_admin }}" class="badge bg-info"><span
+                                                data-feather="eye"></span></a>
+                                        <a href="/dashboard/admin/{{ $user->is_admin }}/edit" class="badge bg-warning"><span
+                                                data-feather="edit"></span></a>
+
+                                        <form action="/dashboard/admin/{{ $user->is_admin }}" method="post"
+                                            class="d-inline">
+                                            @method('delete')
+                                            @csrf
+                                            <button class="badge bg-danger border-0"
+                                                onclick="return confirm('Yakin mau dihapus?')">
+                                                <span data-feather="x-circle"></span></button>
+                                        </form>
+
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
-    <img src="img/lg.png" alt="" style="width:220px;">
-    <h4 class="fw-normal mt-4">KosJogja</h4>
-    <p class="">Aplikasi Anak Kos Yogyakarta.
-        🏡 Cari & pesan kamar kost impianmu di KostJogja pakai Booking Langsung
-        📱 Cari akomodasi berkualitas, harga terjangkau dengan Singgahsini yang dapat disewa secara harian maupun bulanan
-    </p>
-    <p class="lg-6">KostJogja merupakan salah satu aplikasi pencari kos di Yogyakarta. Didirikan pada 23 Juli 2022,
-        KostJogja terus berkembang dan berusaha menjadi penghubung bagi pemilik kos dan pencari kos.
-        KostJogja memanfaatkan teknologi dengan mengelola dan menyajikan daftar kos dengan penjelasan fasilitas secara
-        terperinci dan dilengkapi dengan foto serta detail dari setiap kos.
-        Saat ini KostJogja memiliki lebih dari 20 ribu kamar kos yang tersebar di wilayah Yogyakarta.
-        KostJogja berusaha untuk bisa terus menyajikan data ketersediaan kamar yang akurat, agar calon pencari kos
-        mendapatkan
-        kemudahan dalam pencarian kos.</p>
 @endsection
