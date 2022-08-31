@@ -5,35 +5,35 @@
         <div class="row">
             <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
                 <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-                    <div class="icon"><i class="bx bxl-dribbble"></i></div>
-                    <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-                    <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi
+                    <img src="img/Jogja.png" width="200" height="200" alt="">
+                    <h4 class="title"><a href="">Yogyakarta</a></h4>
+                    <p class="description">Kota Yogyakarta atau dikenal oleh masyarakat setempat dengan nama Kota Jogja atau Kota Yogya adalah ibu kota dan pusat pemerintahan Daerah Istimewa Yogyakarta, Indonesia.
                     </p>
                 </div>
             </div>
 
             <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
                 <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-                    <div class="icon"><i class="bx bx-file"></i></div>
-                    <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-                    <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                    <img src="img/magelang.jpg" width="200" height="200" alt="">
+                    <h4 class="title"><a href="">Magelang</a></h4>
+                    <p class="description">Magelang adalah salah satu kota yang terletak di provinsi Jawa Tengah, Indonesia.
                     </p>
                 </div>
             </div>
 
             <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
                 <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-                    <div class="icon"><i class="bx bx-tachometer"></i></div>
-                    <h4 class="title"><a href="">Magni Dolores</a></h4>
-                    <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+                    <img src="img/bantul.png" width="200" height="200" alt="">
+                    <h4 class="title"><a href="">Bantul</a></h4>
+                    <p class="description">Bantul merupakan salah satu kabupaten yang berada di Daerah Istimewa Yogyakarta, Indonesia. Ibu kotanya berada di kapanewon Bantul.</p>
                 </div>
             </div>
 
             <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
                 <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
-                    <div class="icon"><i class="bx bx-world"></i></div>
-                    <h4 class="title"><a href="">Nemo Enim</a></h4>
-                    <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+                    <img src="img/sleman.png" width="200" height="200" alt="">
+                    <h4 class="title"><a href="">Sleman</a></h4>
+                    <p class="description">Sleman merupakan salah satu kabupaten di Daerah Istimewa Yogyakarta. Ibu kota kabupaten ini berada di kapanewon Sleman. Sleman dikenal sebagai asal buah salak pondoh.</p>
                 </div>
             </div>
 

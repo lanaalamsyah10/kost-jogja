@@ -2,6 +2,12 @@
  <section id="services" class="services">
     <div class="container" data-aos="fade-up">
 
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Search.." name="search"
+                value="{{ request('search') }}">
+            <button class="btn btn-primary rounded-right" type="submit">Search</button>
+        </div>
+
       <div class="section-title">
         <h2>Services</h2>
         <h3>Check our <span>Services</span></h3>
